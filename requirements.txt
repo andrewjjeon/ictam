@@ -1,0 +1,10 @@
+transformers
+datasets
+torch
+torchvision
+matplotlib
+Pillow
+numpy
+evaluate
+jiwer
+transformers[torch]
