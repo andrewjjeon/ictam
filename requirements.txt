@@ -7,4 +7,5 @@ Pillow
 numpy
 evaluate
 jiwer
-transformers[torch]
+opencv
+scikit-learn
