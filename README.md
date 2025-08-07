@@ -5,7 +5,7 @@ ICTAM was my first attempt at applying pretrained LLMs to tactical analysis and 
 <img src="example_caption.png" width="800" />
 <p>Example caption, not the winner declaration followed by a period and the rest of the caption.</p>
 
-<img src="TrainingLossCurve.png" width="400" />
+<img src="TrainingLossCurve.png" width="600" />
 <p>Training and Validation Curves showing convergence (HuggingFace Trainer only starts validating after the first epoch)</p>
 
 <img src="ictam_eval.png" width="300" />
