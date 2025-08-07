@@ -2,8 +2,10 @@
 
 ICTAM was my first attempt at applying pretrained LLMs to tactical analysis and advisory tasks. This work was inspired by [CICERO](https://www.science.org/doi/10.1126/science.ade9097) and [LLMs play sc2](https://arxiv.org/abs/2312.11865). In this project I generated a 723 image + caption dataset of starcraft minimaps and expert-annotated tactical description captions. I then 80-10-10 train-val-test split the dataset, and finetune-trained BLIP, on my data. BLIP is an image captioning model trained with an image-conditioned Cross Entropy Loss. The captions intentionally start with a winner (player color) followed by a period to enable downstream evaluation of ICTAM's tactical judgement (picking the winning/favored player per image). An example caption can be seen below. ICTAM is able to identify the "winning player color" 80% of the time across multiple test trials with the test dataset (data ICTAM had never seen).
 
-<img src="example_caption.png" width="800" />
-<p>Example caption, not the winner declaration followed by a period and the rest of the caption.</p>
+<div align="center">
+  <img src="example_caption.png" width="800" />
+  <p><em>Example caption — not the winner declaration followed by a period and the rest of the caption.</em></p>
+</div>
 
 <img src="TrainingLossCurve.png" width="600" />
 <p>Training and Validation Curves showing convergence (HuggingFace Trainer only starts validating after the first epoch)</p>
