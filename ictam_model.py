@@ -5,6 +5,7 @@ import torch
 import numpy as np
 import matplotlib.pyplot as plt
 import logging
+import textwrap
 from tqdm import tqdm
 from PIL import Image
 from torchvision import transforms
@@ -29,11 +30,11 @@ def blip_inference_on_image(image_path, model, processor):
     imgtensor_bb = processor(images=image, return_tensors="pt").pixel_values #returns image values as tensor
     txttokens_bb = model.generate(pixel_values=imgtensor_bb, max_length=50) #image encoder encodes image tensor --> language decoder  generates text tokens using image tokens as context
     caption_bb = processor.batch_decode(txttokens_bb, skip_special_tokens=True)[0] #decode token id's into words
-
+    wrapped_caption = "\n".join(textwrap.wrap(caption_bb, width=60))
     plt.imshow(np.asarray(image))
-    plt.xlabel(caption_bb, fontsize=10, fontweight='bold')
-    plt.title('BLIP-base Image Caption')
-    plt.savefig(f"{model.name_or_path.split("/")[-1]}_image_caption.png")
+    plt.xlabel(wrapped_caption, fontsize=10, fontweight='bold')
+    plt.title(f"{model.name_or_path.split("/")[-1]} Image Caption")
+    plt.savefig(f"{model.name_or_path.split("/")[-1]}_image_caption.png", bbox_inches='tight', pad_inches=0.5)
     plt.close()
 
 def preprocess(example, image_dir):
@@ -184,3 +185,4 @@ processor_finetuned = BlipProcessor.from_pretrained("blip-finetuned-model")
 blip_inference_on_image(image_path, model_finetuned, processor_finetuned)
 
 test(model_finetuned, processor_finetuned, testset, annotations)
+# %%
