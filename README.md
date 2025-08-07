@@ -7,18 +7,22 @@ ICTAM was my first attempt at applying pretrained LLMs to tactical analysis and 
   <p><em>Example caption — not the winner declaration followed by a period and the rest of the caption.</em></p>
 </div>
 
-<img src="TrainingLossCurve.png" width="600" />
-<p>Training and Validation Curves showing convergence (HuggingFace Trainer only starts validating after the first epoch)</p>
+<div align="center">
+  <img src="TrainingLossCurve.png" width="600" />
+  <p><em>Training and Validation Curves showing convergence (HuggingFace Trainer only starts validating after the first epoch)</em></p>
+</div>
 
-<img src="ictam_eval.png" width="300" />
-<p>ICTAM's tactical judgement testset evaluation results (for how many images does it correctly identify the winner?)</p>
-
+<div align="center">
+  <img src="ictam_eval.png" width="300" />
+  <p><em>ICTAM's tactical judgement testset evaluation results (for how many images does it correctly identify the winner?)</em></p>
+</div>
 
 <div style="text-align:center">
   <img src="blip-image-captioning-base_image_caption.png" width="400" style="vertical-align: top; margin-right:20px;" />
   <img src="blip-finetuned-model_image_caption.png" width="400" style="vertical-align: top; margin-right:20px;" />
+  <p><em>Left/Before BLIP-base model's caption and Right/After my trained model's caption.</em></p>
 </div>
-<p>Left/Before BLIP-base model's caption and Right/After my trained model's caption.</p>
+
 
 
 ### Environment Setup
