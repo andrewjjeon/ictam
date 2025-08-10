@@ -29,11 +29,11 @@
     I evaluated the % of correct tactical judgement from BLIP by parsing the caption string, and creating a list of just the winner prediction before the ".". I then compared this list against the same list from the actual captions. ICTAM successfully identifies the "winning player color" 80% of the time across multiple test trials with the test dataset which ICTAM had not been trained on.
     <div style="display: flex; justify-content: center; gap: 20px;">
       <div style="text-align: center;">
-        <img src="blip-image-captioning-base_image_caption.png" width="400"/>
+        <img src="blip-image-captioning-base_image_caption.png" width="300"/>
         <p><em>blip-base caption inference result</em></p>
       </div>
       <div style="text-align: center;">
-        <img src="blip-finetuned-model_image_caption.png" width="400"/>
+        <img src="blip-finetuned-model_image_caption.png" width="300"/>
         <p><em>blip-finetuned caption inference result</em></p>
       </div>
     </div>
